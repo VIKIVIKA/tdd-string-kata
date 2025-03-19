@@ -1,5 +1,7 @@
-export const add = (sToSum: string): Number => {
-  const numbersToSum: string[] = sToSum.split(",");
-  let sum = 0;
-  return numbersToSum.reduce((a,b) => Number(a)+Number(b), sum);
+export const add = (sToSum: string): number => {
+  return sToSum
+    .replace(/\n/g, ",")
+    .split(",")
+    .map(Number)
+    .reduce((sum, num) => sum + num, 0);
 };
