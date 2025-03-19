@@ -1,6 +1,5 @@
 export const add = (sToSum: string): Number => {
-  if (sToSum === "") {
-    return 0;
-  }
-  return 0;
+  const numbersToSum: string[] = sToSum.split(",");
+  let sum = 0;
+  return numbersToSum.reduce((a,b) => Number(a)+Number(b), sum);
 };
