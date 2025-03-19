@@ -15,3 +15,11 @@ test('should return 10 when "2,2,2\n,2,2"', () => {
 test('should return 12 when "2,2,2\n\n\n\n,2,2,2"', () => {
   expect(add("2,2,2\n,2,2,2")).toEqual(12);
 });
+
+test('should throw negative numbers not allowed when "1,-2"', () => {
+  expect(() => add("1,-2")).toThrow("negative numbers not allowed: -2");
+});
+
+test('should throw negative numbers not allowed when multiple negative numbers "-2, -50"', () => {
+  expect(() => add("1,-2, -50")).toThrow("negative numbers not allowed: -2,-50");
+});
