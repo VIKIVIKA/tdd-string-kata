@@ -1,5 +1,5 @@
-import { greet } from '../src/index';
+import { add } from '../src/index';
 
-test('should return greeting message', () => {
-  expect(greet('World')).toBe('Hello, World!');
+test('should return zero when ""', () => {
+  expect(add("")).toEqual(0);
 });

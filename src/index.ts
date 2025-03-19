@@ -1,3 +1,6 @@
-export const greet = (name: string): string => {
-    return `Hello, ${name}!`;
-  };
+export const add = (sToSum: string): Number => {
+  if (sToSum === "") {
+    return 0;
+  }
+  return 0;
+};
