@@ -25,5 +25,6 @@ tdd-string-kata
 ## Tests performed
 - `Success Cases`
 ![image](https://github.com/user-attachments/assets/ea901cfb-f380-4656-b7cc-93869d1dc48d)
+
 - `Failure Cases`
 ![image](https://github.com/user-attachments/assets/4cf27a39-3abf-49d4-af35-4e4b2c503612)
