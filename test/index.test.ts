@@ -1,4 +1,4 @@
-import { add } from '../src/index';
+import { add } from "../src/index";
 
 test('should return zero when ""', () => {
   expect(add("")).toEqual(0);
@@ -20,6 +20,16 @@ test('should throw negative numbers not allowed when "1,-2"', () => {
   expect(() => add("1,-2")).toThrow("negative numbers not allowed: -2");
 });
 
+test('should throw negative numbers not allowed when "//;\n1;2"', () => {
+  expect(add("//;\n1;2")).toEqual(3);
+});
+
+test('should throw negative numbers not allowed when "//;"', () => {
+  expect(add("//;")).toEqual(0);
+});
+
 test('should throw negative numbers not allowed when multiple negative numbers "-2, -50"', () => {
-  expect(() => add("1,-2, -50")).toThrow("negative numbers not allowed: -2,-50");
+  expect(() => add("1,-2, -50")).toThrow(
+    "negative numbers not allowed: -2,-50"
+  );
 });
